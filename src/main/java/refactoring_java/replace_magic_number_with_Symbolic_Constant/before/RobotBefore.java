@@ -1,10 +1,10 @@
 package refactoring_java.replace_magic_number_with_Symbolic_Constant.before;
 
-public class Robot {
+public class RobotBefore {
 	
 	private final String name;
 
-	public Robot(String name) {
+	public RobotBefore(String name) {
 		this.name = name;
 	}
 	
