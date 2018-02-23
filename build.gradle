@@ -37,11 +37,3 @@ jar {
     }
     dependsOn configurations.runtime// 실행 가능한jar 파일설정
 }
-
-eclipse {
-	project{
-		//.project <natures>..</natures> 참조하여 작성
-		natures 'org.eclipse.jdt.core.javanature'
-		natures 'org.eclipse.buildship.core.gradleprojectnature'//gradle
-	}
-}
