@@ -37,3 +37,10 @@ jar {
     }
     dependsOn configurations.runtime// 실행 가능한jar 파일설정
 }
+
+eclipse {
+	project{
+		natures 'org.eclipse.buildship.core.gradleprojectnature'//gradle
+		natures 'org.eclipse.jdt.core.javanature'
+	}
+}
