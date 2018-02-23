@@ -40,7 +40,8 @@ jar {
 
 eclipse {
 	project{
-		natures 'org.eclipse.buildship.core.gradleprojectnature'//gradle
+		//.project <natures>..</natures> 참조하여 작성
 		natures 'org.eclipse.jdt.core.javanature'
+		natures 'org.eclipse.buildship.core.gradleprojectnature'//gradle
 	}
 }
