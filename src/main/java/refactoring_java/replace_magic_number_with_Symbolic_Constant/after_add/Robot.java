@@ -1,6 +1,6 @@
 package refactoring_java.replace_magic_number_with_Symbolic_Constant.after_add;
 
-public class RobotAfterAdd {
+public class Robot {
 
 	public  enum Command{
 		WALK, STOP, JUMP
@@ -8,11 +8,11 @@ public class RobotAfterAdd {
 	
 	private final String name;
 
-	public RobotAfterAdd(String name) {
+	public Robot(String name) {
 		this.name = name;
 	}
 	
-	public String order(RobotAfterAdd.Command command) {
+	public String order(Robot.Command command) {
 		if (command == Command.WALK) {
 			return String.format("%s %s", name, " walks.");
 		} else if (command == Command.STOP) {

@@ -1,13 +1,13 @@
 package refactoring_java.replace_magic_number_with_Symbolic_Constant.after;
 
-public class RobotAfter {
+public class Robot {
 	public static final int COMMAND_WALK = 0;
 	public static final int COMMAND_STOP = 1;
 	public static final int COMMAND_JUMP = 2;
 
 	private final String name;
 
-	public RobotAfter(String name) {
+	public Robot(String name) {
 		this.name = name;
 	}
 	
