@@ -2,16 +2,12 @@ package refactoring_java.test;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runners.MethodSorters;
-
 import refactoring_java.replace_magic_number_with_Symbolic_Constant.after.RobotAfter;
 import refactoring_java.replace_magic_number_with_Symbolic_Constant.after_add.RobotAfterAdd;
 import refactoring_java.replace_magic_number_with_Symbolic_Constant.before.RobotBefore;
+
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Chap01Test {
