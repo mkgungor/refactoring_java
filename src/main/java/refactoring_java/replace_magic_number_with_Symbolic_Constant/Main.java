@@ -41,5 +41,5 @@ public class Main {
 		System.out.println(robot.order(1)); //stop
 		System.out.println(robot.order(2)); //jump
 	}
-
+	
 }
