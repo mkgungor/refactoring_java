@@ -1,22 +1,16 @@
-package refactoring_java.test;
+package refactoring_java.replace_magic_number_with_Symbolic_Constant;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runners.MethodSorters;
-
-import refactoring_java.replace_magic_number_with_Symbolic_Constant.after.Robot;
-
+import refactoring_java.replace_magic_number_with_Symbolic_Constant.after_add.Robot;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class Chap01BeforeTest {
+public class Chap01AfterAddTest {
 	
-	private static final Logger logger = LogManager.getLogger(Chap01BeforeTest.class);
-	
+	private static final Logger logger = LogManager.getLogger(Chap01AfterAddTest.class);
+
 	private static Robot robot;
 	
 	@BeforeClass
@@ -38,23 +32,19 @@ public class Chap01BeforeTest {
 	}
 	
 	@Test
-	public void test01Before() {
-		prnLogTitle("test01Before()");
-		String result = robot.order(0);
-		prnLog("robot.order(0)", result);
+	public void testAfterAdd() {
+		prnLogTitle("test03AfterAdd()");
+		String result = robot.order(Robot.Command.WALK);
+		prnLog("robot.order(Robot.COMMAND_WALK)", result);
 		Assert.assertEquals("Andrew  walks.", result);
 		
-		result = robot.order(1);
-		prnLog("robot.order(1)", result);
+		result = robot.order(Robot.Command.STOP);
+		prnLog("robot.order(Robot.COMMAND_STOP)", result);
 		Assert.assertEquals("Andrew  stops.", result);
 		
-		result = robot.order(2);
-		prnLog("robot.order(2)", result);
+		result = robot.order(Robot.Command.JUMP);
+		prnLog("robot.order(Robot.COMMAND_JUMP)", result);
 		Assert.assertEquals("Andrew  jumps.", result);
-		
-		result = robot.order(3);
-		prnLog("robot.order(3)", result);
-		Assert.assertEquals("command error. command = 3", result);
 	}
-	
+
 }

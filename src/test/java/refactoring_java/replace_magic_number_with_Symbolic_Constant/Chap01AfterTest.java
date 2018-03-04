@@ -1,4 +1,4 @@
-package refactoring_java.test;
+package refactoring_java.replace_magic_number_with_Symbolic_Constant;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
