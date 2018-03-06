@@ -3,7 +3,6 @@ package refactoring_java.replace_magic_number_with_Symbolic_Constant;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.AfterClass;
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -28,33 +27,14 @@ public class Chap01BeforeTest {
 	public static void tearDownAfterClass() throws Exception {
 		robot = null;
 	}
-
-	private void prnLog(String titile, String msg) {
-		logger.debug(String.format("%s - %s", titile, msg));
-	}
-	
-	private void prnLogTitle(String msg) {
-		logger.info(String.format("==============\t %s \t==============", msg));
-	}
 	
 	@Test
 	public void test01Before() {
-		prnLogTitle("test01Before()");
-		String result = robot.order(0);
-		prnLog("robot.order(0)", result);
-		Assert.assertEquals("Andrew  walks.", result);
-		
-		result = robot.order(1);
-		prnLog("robot.order(1)", result);
-		Assert.assertEquals("Andrew  stops.", result);
-		
-		result = robot.order(2);
-		prnLog("robot.order(2)", result);
-		Assert.assertEquals("Andrew  jumps.", result);
-		
-		result = robot.order(3);
-		prnLog("robot.order(3)", result);
-		Assert.assertEquals("command error. command = 3", result);
+		logger.debug("test01Before()");
+		robot.order(0);
+		robot.order(1);
+		robot.order(2);
+		robot.order(3);
 	}
 	
 }

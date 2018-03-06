@@ -8,15 +8,15 @@ public class Robot {
 		this.name = name;
 	}
 	
-	public String order(int command) {
+	public void order(int command) {
 		if (command == 0) {
-			return String.format("%s %s", name, " walks.");
+			System.out.printf("%s %s%n", name, " walks.");
 		} else if (command == 1) {
-			return String.format("%s %s", name, " stops.");
+			System.out.printf("%s %s%n", name, " stops.");
 		} else if (command == 2) {
-			return String.format("%s %s", name, " jumps.");
+			System.out.printf("%s %s%n", name, " jumps.");
 		} else {
-			return String.format("command error. command = %s", command);
+			System.out.printf("command error. command = %s%n", command);
 		}
 	}
 }
