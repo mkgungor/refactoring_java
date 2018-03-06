@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.2" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="replace_magic_number_with_Symbolic_Constant.Main" project="refactoring_java" 
+    file="/refactoring_java/src/main/java/replace_magic_number_with_Symbolic_Constant/Main.java" binary="false" 
+    label="main" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="95" y="0"/>    
+    <execution id="2">      
+      <position height="105" width="282" x="5" y="248"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="replace_magic_number_with_Symbolic_Constant.Robot" project="refactoring_java" 
+    file="/refactoring_java/src/main/java/replace_magic_number_with_Symbolic_Constant/Robot.java" binary="false" 
+    label="robot" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="464" y="0"/>    
+    <execution id="4">      
+      <position height="24" width="282" x="291" y="272"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="24" width="282" x="291" y="305"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="Robot(java.lang.String)" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="order(int):void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>
+</sequence-diagram>
