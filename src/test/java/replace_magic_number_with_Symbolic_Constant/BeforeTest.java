@@ -1,4 +1,4 @@
-package refactoring_java.replace_magic_number_with_Symbolic_Constant;
+package replace_magic_number_with_Symbolic_Constant;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,13 +10,14 @@ import org.junit.runners.MethodSorters;
 
 import replace_magic_number_with_Symbolic_Constant.after.Robot;
 
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class AfterTest {
-
-	private static final Logger logger = LogManager.getLogger(AfterTest.class);
-
+public class BeforeTest {
+	
+	private static final Logger logger = LogManager.getLogger(BeforeTest.class);
+	
 	private static Robot robot;
-
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		robot = new Robot("Andrew");
@@ -26,14 +27,14 @@ public class AfterTest {
 	public static void tearDownAfterClass() throws Exception {
 		robot = null;
 	}
-
+	
 	@Test
-	public void testAfter() {
-		logger.debug("test02After()");
-		robot.order(Robot.COMMAND_WALK);
-		robot.order(Robot.COMMAND_STOP);
-		robot.order(Robot.COMMAND_JUMP);
+	public void test01Before() {
+		logger.debug("test01Before()");
+		robot.order(0);
+		robot.order(1);
+		robot.order(2);
 		robot.order(3);
 	}
-
+	
 }
