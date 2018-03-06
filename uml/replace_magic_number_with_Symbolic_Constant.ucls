@@ -4,7 +4,7 @@
   <class id="1" language="java" name="replace_magic_number_with_Symbolic_Constant.Main" project="refactoring_java" 
     file="/refactoring_java/src/main/java/replace_magic_number_with_Symbolic_Constant/Main.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="544" y="262"/>    
+    <position height="-1" width="-1" x="837" y="77"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -14,7 +14,7 @@
   <class id="2" language="java" name="replace_magic_number_with_Symbolic_Constant.Robot" project="refactoring_java" 
     file="/refactoring_java/src/main/java/replace_magic_number_with_Symbolic_Constant/Robot.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="730" y="263"/>    
+    <position height="-1" width="-1" x="1023" y="78"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -24,7 +24,7 @@
   <class id="3" language="java" name="replace_magic_number_with_Symbolic_Constant.after.Main" project="refactoring_java" 
     file="/refactoring_java/src/main/java/replace_magic_number_with_Symbolic_Constant/after/Main.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="971" y="116"/>    
+    <position height="-1" width="-1" x="830" y="348"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -35,7 +35,7 @@
     project="refactoring_java" 
     file="/refactoring_java/src/main/java/replace_magic_number_with_Symbolic_Constant/after/Robot.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="971" y="291"/>    
+    <position height="-1" width="-1" x="1061" y="348"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -46,7 +46,7 @@
     project="refactoring_java" 
     file="/refactoring_java/src/main/java/replace_magic_number_with_Symbolic_Constant/afterEnum/Main.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="138" y="368"/>    
+    <position height="-1" width="-1" x="463" y="379"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
     project="refactoring_java" 
     file="/refactoring_java/src/main/java/replace_magic_number_with_Symbolic_Constant/afterEnum/Robot.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="358" y="474"/>    
+    <position height="-1" width="-1" x="666" y="482"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -68,33 +68,106 @@
     project="refactoring_java" 
     file="/refactoring_java/src/main/java/replace_magic_number_with_Symbolic_Constant/afterEnum/Robot.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="356" y="294"/>    
+    <position height="-1" width="-1" x="666" y="288"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <nesting id="8">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="6"/>  
-  </nesting>  
-  <dependency id="9">    
+  <class id="8" language="java" name="replace_magic_number_with_Symbolic_Constant.afterClass.Main" 
+    project="refactoring_java" 
+    file="/refactoring_java/src/main/java/replace_magic_number_with_Symbolic_Constant/afterClass/Main.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="93" y="66"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="replace_magic_number_with_Symbolic_Constant.afterClass.Robot" 
+    project="refactoring_java" 
+    file="/refactoring_java/src/main/java/replace_magic_number_with_Symbolic_Constant/afterClass/Robot.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="412" y="66"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="replace_magic_number_with_Symbolic_Constant.afterClass.RobotCommand" 
+    project="refactoring_java" 
+    file="/refactoring_java/src/main/java/replace_magic_number_with_Symbolic_Constant/afterClass/RobotCommand.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="93" y="246"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="11">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="12" name="COMMAND_WALK">        
+        <position height="18" width="100" x="244" y="164"/>      
+      </attribute>      
+      <multiplicity id="13" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="14">    
     <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="7"/>  
+    <end type="TARGET" refId="6"/>  
   </dependency>  
-  <dependency id="10">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
-  <dependency id="11">    
+  <association id="15">    
+    <bendpoint x="179" y="115"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="16" name="COMMAND_JUMP">        
+        <position height="18" width="95" x="186" y="123"/>      
+      </attribute>      
+      <multiplicity id="17" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="18">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="2"/>  
   </dependency>  
-  <dependency id="12">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="6"/>  
+  <dependency id="19">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
   </dependency>  
+  <dependency id="20">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="21">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <nesting id="22">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="6"/>  
+  </nesting>  
+  <dependency id="23">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <association id="24">    
+    <bendpoint x="350" y="210"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="25" name="COMMAND_STOP">        
+        <position height="18" width="96" x="362" y="199"/>      
+      </attribute>      
+      <multiplicity id="26" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

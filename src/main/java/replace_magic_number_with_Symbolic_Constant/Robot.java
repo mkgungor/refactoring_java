@@ -1,13 +1,13 @@
 package replace_magic_number_with_Symbolic_Constant;
 
 public class Robot {
-	
+
 	private final String name;
 
 	public Robot(String name) {
 		this.name = name;
 	}
-	
+
 	public void order(int command) {
 		if (command == 0) {
 			System.out.printf("%s %s%n", name, " walks.");
