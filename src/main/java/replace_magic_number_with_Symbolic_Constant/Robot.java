@@ -1,4 +1,4 @@
-package refactoring_java.replace_magic_number_with_Symbolic_Constant;
+package replace_magic_number_with_Symbolic_Constant;
 
 public class Robot {
 	

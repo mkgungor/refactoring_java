@@ -1,4 +1,4 @@
-package refactoring_java.replace_magic_number_with_Symbolic_Constant.after_add;
+package replace_magic_number_with_Symbolic_Constant.afterEnum;
 
 public class Main {
 

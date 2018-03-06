@@ -8,15 +8,15 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import refactoring_java.replace_magic_number_with_Symbolic_Constant.after_add.Robot;
+import replace_magic_number_with_Symbolic_Constant.after.Robot;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class Chap01AfterAddTest {
-	
-	private static final Logger logger = LogManager.getLogger(Chap01AfterAddTest.class);
+public class AfterTest {
+
+	private static final Logger logger = LogManager.getLogger(AfterTest.class);
 
 	private static Robot robot;
-	
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		robot = new Robot("Andrew");
@@ -28,11 +28,12 @@ public class Chap01AfterAddTest {
 	}
 
 	@Test
-	public void testAfterAdd() {
-		logger.debug("test03AfterAdd()");
-		robot.order(Robot.Command.WALK);
-		robot.order(Robot.Command.STOP);
-		robot.order(Robot.Command.JUMP);
+	public void testAfter() {
+		logger.debug("test02After()");
+		robot.order(Robot.COMMAND_WALK);
+		robot.order(Robot.COMMAND_STOP);
+		robot.order(Robot.COMMAND_JUMP);
+		robot.order(3);
 	}
 
 }
