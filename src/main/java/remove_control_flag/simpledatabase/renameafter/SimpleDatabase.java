@@ -1,4 +1,4 @@
-package remove_control_flag.simpledatabase.after;
+package remove_control_flag.simpledatabase.renameafter;
 
 import java.io.BufferedReader;
 import java.io.IOException;
