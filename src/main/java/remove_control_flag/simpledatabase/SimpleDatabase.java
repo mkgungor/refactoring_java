@@ -15,9 +15,11 @@ public class SimpleDatabase {
 		String line;
 		while ((line = reader.readLine()) != null) {
 			int equalIndex = line.indexOf("=");
-			String key = line.substring(0, equalIndex);
-			String value = line.substring(equalIndex+1);
-			map.put(key, value);
+			if (equalIndex > 0) {
+				String key = line.substring(0, equalIndex);
+				String value = line.substring(equalIndex+1);
+				map.put(key, value);
+			}
 		}
 	}
 
