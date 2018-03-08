@@ -1,4 +1,4 @@
-package remove_control_flag.simpledatabase.before_rename;
+package remove_control_flag.simpledatabase.rename;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
