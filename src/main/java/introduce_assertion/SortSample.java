@@ -23,6 +23,7 @@ public class SortSample {
 			int v = data[m];	// data[m]는 data[x] ~ data[data.length-1]의 최소값
 			data[m] = data[x];
 			data[x] = v;
+			// 여기서 data[0] ~ data[x + 1]은 이미 정렬 되어 있어야 함
 		}
 	}
 	
