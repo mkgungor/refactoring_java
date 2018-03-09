@@ -1,5 +1,7 @@
 package introduce_assertion.after_add;
 
+import java.util.Arrays;
+
 public class SortSample {
 	private final int[] data;
 	
@@ -16,7 +18,7 @@ public class SortSample {
 	public void sort() {
 		for(int x=0; x <data.length - 1; x++) {
 			int m = x;
-			for(int y = x + 1; y <data.length; y++) {
+			for(int y = x + 1; y <data.length - 1; y++) {
 				if (data[m] > data[y]) {
 					m = y;
 				}
@@ -56,19 +58,9 @@ public class SortSample {
 	
 	@Override
 	public String toString() {
-		StringBuffer buffer = new StringBuffer();
-		buffer.append("[ ");
-		for(int i=0; i <data.length; i++) {
-			buffer.append(data[i]);
-			buffer.append(",");
-		}
-		int start = buffer.lastIndexOf(",");
-		buffer.replace(start, start+1, "");
-		buffer.append(" ]");
-		return buffer.toString();
+		return String.format("%s", Arrays.toString(data));
 	}
 	
-
 	public int[] getData() {
 		return data;
 	}

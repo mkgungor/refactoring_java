@@ -1,5 +1,7 @@
 package introduce_assertion;
 
+import java.util.Arrays;
+
 public class SortSample {
 	private final int[] data;
 
@@ -26,19 +28,10 @@ public class SortSample {
 			// 여기서 data[0] ~ data[x + 1]은 이미 정렬 되어 있어야 함
 		}
 	}
-	
+
 	@Override
 	public String toString() {
-		StringBuffer buffer = new StringBuffer();
-		buffer.append("[ ");
-		for(int i=0; i <data.length; i++) {
-			buffer.append(data[i]);
-			buffer.append(",");
-		}
-		int start = buffer.lastIndexOf(",");
-		buffer.replace(start, start+1, "");
-		buffer.append(" ]");
-		return buffer.toString();
+		return String.format("%s", Arrays.toString(data));
 	}
 
 	public int[] getData() {
