@@ -38,9 +38,9 @@ public class SimpleDatabase {
 				String ss1 = s1.toString();
 				String ss2 = s2.toString();
 				map.put(ss1, ss2);
-			}
-		}
-	}
+			} //end if-else
+		}//end while
+	}//end contructor
 
 	public void putValue(String key, String value) {
 		map.put(key, value);

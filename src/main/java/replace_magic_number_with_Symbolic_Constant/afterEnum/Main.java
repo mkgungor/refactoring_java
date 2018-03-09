@@ -6,9 +6,9 @@ public class Main {
 		System.out.println("afterAddMain()");
 		Robot robot = new Robot("Andrew");
 
-		robot.order(Robot.Command.WALK); // walk
-		robot.order(Robot.Command.STOP); // stop
-		robot.order(Robot.Command.JUMP); // jump
+		robot.order(Robot.Command.WALK);
+		robot.order(Robot.Command.STOP);
+		robot.order(Robot.Command.JUMP);
 	}
 
 }
