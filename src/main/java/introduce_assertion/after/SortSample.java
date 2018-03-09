@@ -60,4 +60,10 @@ public class SortSample {
 		buffer.append(" ]");
 		return buffer.toString();
 	}
+	
+
+	public int[] getData() {
+		return data;
+	}
+	
 }
