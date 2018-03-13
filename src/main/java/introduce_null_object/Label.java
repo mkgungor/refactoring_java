@@ -19,7 +19,4 @@ public class Label {
 	public String getLabel() {
 		return label;
 	}
-	
-	
-
 }

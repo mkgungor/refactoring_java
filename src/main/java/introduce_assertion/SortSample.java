@@ -10,9 +10,7 @@ public class SortSample {
 		System.arraycopy(data, 0, this.data, 0, data.length);
 	}
 	
-	/**
-	 * 선택 정렬
-	 */
+//	선택 정렬
 	public void sort() {
 		for(int x=0; x <data.length - 1; x++) {
 			int m = x;

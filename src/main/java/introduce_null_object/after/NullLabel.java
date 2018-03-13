@@ -14,5 +14,4 @@ public class NullLabel extends Label {
 	@Override
 	public void display() {}
 	
-	
 }
