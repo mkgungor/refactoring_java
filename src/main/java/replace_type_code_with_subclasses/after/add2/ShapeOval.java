@@ -1,0 +1,30 @@
+package replace_type_code_with_subclasses.after.add2;
+
+public class ShapeOval extends Shape {
+	public static ShapeOval createShapeOval(int startX, int startY, int endX, int endY) {
+		return new ShapeOval(startX, startY, endX, endY);
+	}
+	
+	public ShapeOval(int startX, int startY, int endX, int endY) {
+		super(startX, startY, endX, endY);
+	}
+
+	@Override
+	public int getTypeCode() {
+		return Shape.TYPECODE_OVAL;
+	}
+	
+	@Override
+	public String getName() {
+		return "OVAL";
+	}
+
+	@Override
+	public void draw() {
+		drawOval();
+	}
+
+	private void drawOval() {
+		System.out.printf("%15s : %s%n", "drawOval", this.toString());		
+	}
+}
