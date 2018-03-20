@@ -13,4 +13,11 @@ public class Direction {
 		_x = x;
 		_y = y;
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Direction(%s, %s)", _x, _y);
+	}
+	
+	
 }

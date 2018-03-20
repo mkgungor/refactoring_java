@@ -13,4 +13,10 @@ public class Position {
 		_x += dx;
 		_y += dy;
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Position(%s, %s)", _x, _y);
+	}
+	
 }

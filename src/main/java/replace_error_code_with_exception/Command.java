@@ -8,6 +8,7 @@ public class Command {
 	public static final Command BACKWARD = new Command("backward");
 	public static final Command TURN_RIGHT = new Command("right");
 	public static final Command TURN_LEFT = new Command("left");
+
 	private static final Map<String, Command> _commandNameMap = new HashMap<String, Command>();
 	static {
 		_commandNameMap.put(FORWARD._name, FORWARD);
