@@ -1,22 +1,22 @@
 package replace_error_code_with_exception;
 
 public class Position {
-	public int _x;
-	public int _y;
+	private int x;
+	private int y;
 
 	public Position(int x, int y) {
-		_x = x;
-		_y = y;
+		this.x = x;
+		this.y = y;
 	}
 
 	public void relativeMove(int dx, int dy) {
-		_x += dx;
-		_y += dy;
+		this.x += dx;
+		this.y += dy;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Position(%s, %s)", _x, _y);
+		return String.format("Position(%s, %s)", x, y);
 	}
 	
 }

@@ -1,14 +1,14 @@
-package replace_error_code_with_exception;
+package replace_error_code_with_exception.after;
 
 import java.util.StringTokenizer;
 
 public class Robot {
-	private final String name;
-	private final Position position = new Position(0, 0);
-	private final Direction direction = new Direction(0, 1);
+	private final String _name;
+	private final Position _position = new Position(0, 0);
+	private final Direction _direction = new Direction(0, 1);
 	
 	public Robot(String name) {
-		this.name = name;
+		_name = name;
 	}
 	
 	public void execute(String commandSequence) {
@@ -32,13 +32,13 @@ public class Robot {
 
 	private boolean executeCommand(Command command) {
 		if (command == Command.FORWARD) {
-			position.relativeMove(direction.getX(), direction.getY());
+			_position.relativeMove(_direction._x, _direction._y);
 		}else if (command == Command.BACKWARD){
-			position.relativeMove(-direction.getX(), -direction.getY());
+			_position.relativeMove(-_direction._x, -_direction._y);
 		}else if (command == Command.TURN_RIGHT) {
-			direction.setDirection(direction.getY(), -direction.getX());
+			_direction.setDirection(_direction._y, -_direction._x);
 		}else if (command == Command.TURN_LEFT) {
-			direction.setDirection(-direction.getY(), direction.getX());
+			_direction.setDirection(-_direction._y, _direction._x);
 		}else {
 			return false;
 		}
@@ -47,7 +47,7 @@ public class Robot {
 
 	@Override
 	public String toString() {
-		return String.format("Robot [%s, %s, %s]", name, position, direction);
+		return String.format("Robot [%s, %s, %s]", _name, _position, _direction);
 	}
 
 }

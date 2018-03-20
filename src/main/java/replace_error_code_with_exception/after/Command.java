@@ -1,4 +1,4 @@
-package replace_error_code_with_exception;
+package replace_error_code_with_exception.after;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,27 +9,27 @@ public class Command {
 	public static final Command TURN_RIGHT = new Command("right");
 	public static final Command TURN_LEFT = new Command("left");
 
-	private static final Map<String, Command> commandNameMap = new HashMap<String, Command>();
+	private static final Map<String, Command> _commandNameMap = new HashMap<String, Command>();
 	static {
-		commandNameMap.put(FORWARD.name, FORWARD);
-		commandNameMap.put(BACKWARD.name, BACKWARD);
-		commandNameMap.put(TURN_RIGHT.name, TURN_RIGHT);
-		commandNameMap.put(TURN_LEFT.name, TURN_LEFT);
+		_commandNameMap.put(FORWARD._name, FORWARD);
+		_commandNameMap.put(BACKWARD._name, BACKWARD);
+		_commandNameMap.put(TURN_RIGHT._name, TURN_RIGHT);
+		_commandNameMap.put(TURN_LEFT._name, TURN_LEFT);
 	}
-	private final String name;
+	private final String _name;
 
 	private Command(String name) {
-		this.name = name;
+		_name = name;
 	}
 
 	public String getName() {
-		return name;
+		return _name;
 	}
 
 	public static Command parseCommand(String name) {
-		if (!commandNameMap.containsKey(name)) {
+		if (!_commandNameMap.containsKey(name)) {
 			return null;
 		}
-		return commandNameMap.get(name);
+		return _commandNameMap.get(name);
 	}
 }
