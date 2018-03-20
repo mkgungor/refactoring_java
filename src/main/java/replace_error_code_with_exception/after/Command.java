@@ -18,7 +18,7 @@ public class Command {
 	}
 	private final String _name;
 
-	private Command(String name) {
+	protected Command(String name) {
 		_name = name;
 	}
 
@@ -26,10 +26,11 @@ public class Command {
 		return _name;
 	}
 
-	public static Command parseCommand(String name) {
+	public static Command parseCommand(String name) throws InvalidCommandException {
 		if (!_commandNameMap.containsKey(name)) {
-			return null;
+			throw new InvalidCommandException(name);
 		}
 		return _commandNameMap.get(name);
 	}
+	
 }

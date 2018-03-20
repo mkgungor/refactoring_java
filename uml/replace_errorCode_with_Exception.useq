@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.2" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="replace_error_code_with_exception.Main" project="refactoring_java" 
+    file="/refactoring_java/src/main/java/replace_error_code_with_exception/Main.java" binary="false" label="main" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="120" y="0"/>    
+    <execution id="2">      
+      <position height="496" width="203" x="5" y="113"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="replace_error_code_with_exception.Robot" project="refactoring_java" 
+    file="/refactoring_java/src/main/java/replace_error_code_with_exception/Robot.java" binary="false" label="robot" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="353" y="0"/>    
+    <execution id="4">      
+      <position height="24" width="203" x="212" y="137"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="403" width="203" x="212" y="182"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="87" width="7" x="310" y="249"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="212" width="7" x="310" y="349"/>    
+    </execution>  
+  </object>  
+  <object id="18" language="java" name="replace_error_code_with_exception.Command" project="refactoring_java" 
+    file="/refactoring_java/src/main/java/replace_error_code_with_exception/Command.java" binary="false" label="command" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="420" y="0"/>    
+    <execution id="13">      
+      <position height="24" width="203" x="419" y="288"/>    
+    </execution>  
+  </object>  
+  <object id="19" language="java" name="replace_error_code_with_exception.Position" project="refactoring_java" 
+    file="/refactoring_java/src/main/java/replace_error_code_with_exception/Position.java" binary="false" 
+    label="position" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="676" y="0"/>    
+    <execution id="15">      
+      <position height="24" width="203" x="419" y="423"/>    
+    </execution>  
+  </object>  
+  <object id="20" language="java" name="replace_error_code_with_exception.Direction" project="refactoring_java" 
+    file="/refactoring_java/src/main/java/replace_error_code_with_exception/Direction.java" binary="false" 
+    label="direction" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="740" y="0"/>    
+    <execution id="17">      
+      <position height="24" width="203" x="833" y="513"/>    
+    </execution>  
+  </object>  
+  <combined-fragment id="21" interaction-operator="ALT">    
+    <interaction-operand id="22" constraint="command == Command.FORWARD or command == COMMAND.BACKWARD">      
+      <fragment refId="14"/>    
+    </interaction-operand>    
+    <interaction-operand id="23" constraint="command == Command.TURN_RIGHT or command == Command.TURN_LEFT">      
+      <fragment refId="16"/>    
+    </interaction-operand>  
+  </combined-fragment>  
+  <message id="3" operation="Robot(java.lang.String)" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="execute(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="8" operation="executeCommand(java.lang.String):boolean" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="10" operation="executeCommand(replace_error_code_with_exception.Command):boolean" asynchronous="false" 
+    x="368" y="315">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" operation="parseCommand(java.lang.String):replace_error_code_with_exception.Command" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="14" operation="relativeMove(int,int):void" asynchronous="false" x="323" y="403">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="16" operation="setDirection(int,int):void" asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>
+</sequence-diagram>
