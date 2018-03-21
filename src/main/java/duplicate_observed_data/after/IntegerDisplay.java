@@ -1,4 +1,4 @@
-package duplicate_observed_data;
+package duplicate_observed_data.after;
 
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -10,18 +10,24 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class IntegerDisplay extends JFrame implements ActionListener {
+public class IntegerDisplay extends JFrame implements ActionListener , ValueListener{
 
 	private JPanel contentPane;
 	private JButton btnIncrement;
 	private JButton btnDecrement;
 	
-	private int value;
+	private Value value;
 	private JLabel lblOctal;
 	private JLabel lblDecimal;
 	private JLabel lblHexadecimal;
 
 	public IntegerDisplay() {
+		initComponent();
+		value = new Value(0);
+		value.addValueListener(this);
+	}
+
+	private void initComponent() {
 		setTitle("IntegerDisplay");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 300, 200);
@@ -58,21 +64,27 @@ public class IntegerDisplay extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource()==btnIncrement) {
-			setValue(value +1);
+			setValue(value.getValue()+1);
 		}
 		if (e.getSource()==btnDecrement) {
-			setValue(value-1);
+			setValue(value.getValue()-1);
 		}
 	}
 	
 	private void setValue(int value) {
-		this.value = value;
-		lblOctal.setText(Integer.toOctalString(value));
-		lblDecimal.setText(Integer.toString(value));
-		lblHexadecimal.setText(Integer.toHexString(value));
+		this.value.setValue(value);
 	}
 
 	public int getValue() {
-		return value;
+		return value.getValue();
+	}
+
+	@Override
+	public void valueChanger(ValueChangeEvent e) {
+		if (e.getSource() == value) {
+			lblOctal.setText(Integer.toOctalString(value.getValue()));
+			lblDecimal.setText(Integer.toString(value.getValue()));
+			lblHexadecimal.setText(Integer.toHexString(value.getValue()));
+		}
 	}
 }
