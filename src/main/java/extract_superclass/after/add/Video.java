@@ -1,10 +1,9 @@
 package extract_superclass.after.add;
 
 public class Video extends Media{
-	private String data;
 
 	public Video(String data) {
-		this.data = data;
+		super(data);
 	}
 
 	@Override

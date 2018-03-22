@@ -2,7 +2,7 @@ package extract_superclass.after.add;
 
 public class Music extends Media {
 	public Music(String data) {
-		this.data = data;
+		super(data);
 	}
 
 	@Override

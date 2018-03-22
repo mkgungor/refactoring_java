@@ -1,11 +1,10 @@
 package extract_superclass.after.add;
 
 public abstract class Media {
-
 	protected String data;
 
-	public Media() {
-		super();
+	public Media(String data) {
+		this.data = data;
 	}
 
 	public abstract void play();
