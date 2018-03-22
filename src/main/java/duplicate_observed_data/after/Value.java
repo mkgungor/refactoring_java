@@ -10,7 +10,6 @@ public class Value {
 	public Value(int value) {
 		this.value = value;
 		this.listeners = new ArrayList<>();
-		
 	}
 
 	private void notifyToListener() {

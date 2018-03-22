@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.2" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="duplicate_observed_data.after.IntegerDisplay" project="refactoring_java" 
+    file="/refactoring_java/src/main/java/duplicate_observed_data/after/IntegerDisplay.java" binary="false" 
+    label="integerDisplay" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="316" y="0"/>    
+    <execution id="2">      
+      <position height="887" width="173" x="5" y="116"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="363" width="7" x="88" y="616"/>    
+    </execution>    
+    <execution id="17">      
+      <position height="24" width="7" x="91" y="794"/>    
+    </execution>  
+  </object>  
+  <object id="18" language="java" name="duplicate_observed_data.after.Graph" project="refactoring_java" 
+    file="/refactoring_java/src/main/java/duplicate_observed_data/after/Graph.java" binary="false" label="graph" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="324" y="0"/>    
+    <execution id="6">      
+      <position height="80" width="173" x="182" y="224"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="72" width="173" x="182" y="418"/>    
+    </execution>  
+  </object>  
+  <object id="23" language="java" name="duplicate_observed_data.after.CircleGraph" project="refactoring_java" 
+    file="/refactoring_java/src/main/java/duplicate_observed_data/after/CircleGraph.java" binary="false" 
+    label="circleGraph" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="506" y="0"/>    
+    <execution id="20">      
+      <position height="24" width="173" x="359" y="256"/>    
+    </execution>    
+    <execution id="24">      
+      <position height="24" width="173" x="359" y="833"/>    
+    </execution>  
+  </object>  
+  <object id="25" language="java" name="duplicate_observed_data.after.RectangleGraph" project="refactoring_java" 
+    file="/refactoring_java/src/main/java/duplicate_observed_data/after/RectangleGraph.java" binary="false" 
+    label="rectangleGraph" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="800" y="0"/>    
+    <execution id="22">      
+      <position height="24" width="173" x="536" y="442"/>    
+    </execution>    
+    <execution id="26">      
+      <position height="24" width="173" x="536" y="883"/>    
+    </execution>  
+  </object>  
+  <object id="27" language="java" name="duplicate_observed_data.after.Value" project="refactoring_java" 
+    file="/refactoring_java/src/main/java/duplicate_observed_data/after/Value.java" binary="false" label="value" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="823" y="0"/>    
+    <execution id="4">      
+      <position height="24" width="173" x="713" y="140"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="24" width="173" x="713" y="295"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="305" width="173" x="536" y="650"/>    
+    </execution>    
+    <execution id="29">      
+      <position height="233" width="7" x="619" y="698"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="24" width="173" x="713" y="488"/>    
+    </execution>  
+  </object>  
+  <combined-fragment id="33" interaction-operator="OPT">    
+    <interaction-operand id="34" constraint="GRAPHTYPE==GIRCLE">      
+      <fragment refId="19"/>      
+      <fragment refId="7"/>      
+      <fragment refId="5"/>    
+    </interaction-operand>  
+  </combined-fragment>  
+  <combined-fragment id="35" interaction-operator="OPT">    
+    <interaction-operand id="36" constraint="GRAPHTYPE==RECTANGLE">      
+      <fragment refId="11"/>      
+      <fragment refId="9"/>      
+      <fragment refId="21"/>    
+    </interaction-operand>  
+  </combined-fragment>  
+  <combined-fragment id="37" interaction-operator="LOOP">    
+    <interaction-operand id="38" constraint="listener!=null">      
+      <fragment refId="32"/>      
+      <fragment refId="30"/>      
+      <fragment refId="31"/>    
+    </interaction-operand>  
+  </combined-fragment>  
+  <message id="3" operation="Value(int)" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" 
+    operation="createGraph(duplicate_observed_data.after.Graph.GraphType,int,int):duplicate_observed_data.after.Graph" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="addValueListener(duplicate_observed_data.after.ValueListener):void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" 
+    operation="createGraph(duplicate_observed_data.after.Graph.GraphType,int,int):duplicate_observed_data.after.Graph" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="addValueListener(duplicate_observed_data.after.ValueListener):void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="setValue(int):void" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" operation="setValue(int):void" asynchronous="false">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="19" operation="getInstance(int,int):duplicate_observed_data.after.CircleGraph" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="getInstance(int,int):duplicate_observed_data.after.RectangleGraph" asynchronous="false">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="28" operation="notifyToListener():void" asynchronous="false">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="29"/>  
+  </message>  
+  <message id="30" operation="valueChanger(duplicate_observed_data.after.ValueChangeEvent):void" asynchronous="false">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="31" operation="valueChanger(duplicate_observed_data.after.ValueChangeEvent):void" asynchronous="false">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>  
+  <message id="32" operation="valueChanger(duplicate_observed_data.after.ValueChangeEvent):void" asynchronous="false">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="26"/>  
+  </message>
+</sequence-diagram>

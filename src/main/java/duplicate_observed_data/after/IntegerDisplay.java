@@ -10,6 +10,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import duplicate_observed_data.after.Graph.GraphType;
+
+import java.awt.BorderLayout;
+
+@SuppressWarnings("serial")
 public class IntegerDisplay extends JFrame implements ActionListener , ValueListener{
 
 	private JPanel contentPane;
@@ -20,11 +25,16 @@ public class IntegerDisplay extends JFrame implements ActionListener , ValueList
 	private JLabel lblOctal;
 	private JLabel lblDecimal;
 	private JLabel lblHexadecimal;
-
+	private JPanel mainPanel;
+	private Graph circlePanel;
+	private Graph rectPanel;
+	
 	public IntegerDisplay() {
 		initComponent();
 		value = new Value(0);
 		value.addValueListener(this);
+		value.addValueListener(circlePanel);
+		value.addValueListener(rectPanel);
 	}
 
 	private void initComponent() {
@@ -34,32 +44,45 @@ public class IntegerDisplay extends JFrame implements ActionListener , ValueList
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(new GridLayout(0, 2, 0, 0));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		
+		mainPanel = new JPanel();
+		mainPanel.setLayout(new GridLayout(0, 2, 0, 0));
 		
 		JLabel titleOctal = new JLabel("Octal:");
-		contentPane.add(titleOctal);
+		mainPanel.add(titleOctal);
 		
 		lblOctal = new JLabel("0");
-		contentPane.add(lblOctal);
+		mainPanel.add(lblOctal);
 		
 		JLabel titleDecimal = new JLabel("Decimal:");
-		contentPane.add(titleDecimal);
+		mainPanel.add(titleDecimal);
 		
 		lblDecimal = new JLabel("0");
-		contentPane.add(lblDecimal);
+		mainPanel.add(lblDecimal);
 		
 		JLabel titleHexadecimal = new JLabel("Hexadecimal:");
-		contentPane.add(titleHexadecimal);
+		mainPanel.add(titleHexadecimal);
 		
 		lblHexadecimal = new JLabel("0");
-		contentPane.add(lblHexadecimal);
+		mainPanel.add(lblHexadecimal);
 		
 		btnIncrement = new JButton("+");
 		btnIncrement.addActionListener(this);
-		contentPane.add(btnIncrement);
+		mainPanel.add(btnIncrement);
 		
 		btnDecrement = new JButton("-");
-		contentPane.add(btnDecrement);
+		btnDecrement.addActionListener(this);
+		mainPanel.add(btnDecrement);
+		
+		circlePanel = Graph.createGraph(GraphType.CIRCLE,100, 100);
+		rectPanel = Graph.createGraph(GraphType.RECTANGLE, 100, 50);
+
+		contentPane.add(mainPanel, BorderLayout.NORTH);
+		contentPane.add(circlePanel, BorderLayout.CENTER);
+		contentPane.add(rectPanel, BorderLayout.SOUTH);
+		
+		pack();
 	}
 
 	public void actionPerformed(ActionEvent e) {
